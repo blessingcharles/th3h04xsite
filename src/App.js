@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import {BrowserRouter , Redirect ,Route ,Switch} from 'react-router-dom'
 
-function App() {
+import './App.css'
+import Dev from './pages/Dev'
+import Homepage from './pages/Homepage'
+import Ttc from './pages/Ttc'
+import WriteUps from './pages/WriteUps'
+
+
+import MyNavbar from './components/MyNavbar'
+import MyFooter from "./components/MyFooter"
+
+function App(){
+
+  const Routers = ()=>{
+    return(
+     
+        <Switch>
+
+          <Route exact path='/'>
+            <Homepage />
+          </Route>
+
+          <Route exact path='/ttc'>
+           <Ttc />
+          </Route>
+
+          <Route exact path='/dev'>
+            <Dev/>
+          </Route>
+
+          <Route exact path='/writeups'>
+            <WriteUps />
+          </Route>
+
+          <Redirect exact path='/blog' />
+
+        </Switch>
+     
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+    <BrowserRouter>
+
+          <MyNavbar/>
+         
+          {Routers()}
+          
+          <MyFooter />
+
+    </BrowserRouter>
+    
+   
+    );
+  
 }
 
 export default App;
