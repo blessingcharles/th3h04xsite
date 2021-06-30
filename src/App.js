@@ -6,7 +6,7 @@ import Dev from './pages/Dev'
 import Homepage from './pages/Homepage'
 import Ttc from './pages/Ttc'
 import WriteUps from './pages/WriteUps'
-
+import EachWriteUps from './pages/EachWriteUps'
 
 import MyNavbar from './components/MyNavbar'
 import MyFooter from "./components/MyFooter"
@@ -34,7 +34,11 @@ function App(){
             <WriteUps />
           </Route>
 
-          <Redirect exact path='/blog' />
+          <Route exact path='/writeups/:name'>
+            <EachWriteUps />
+          </Route>
+
+          <Redirect exact path='/' />
 
         </Switch>
      

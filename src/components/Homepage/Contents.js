@@ -9,7 +9,7 @@ export default function Contents() {
             <div className="container">
                 <div className="row align-items-center  justify-content-between">
                     <div className="col-md">
-                        <img src={require("../../images/computers.svg")}/>
+                        <img src={require("../../images/computers.svg").default}/>
                     </div>
                     <div className="col-md p-5">
                         <h2>What can You Expect Here?</h2>
@@ -37,7 +37,7 @@ export default function Contents() {
 
                     </div>
                     <div className="col-md">
-                        <img src={require("../../images/Firewall.svg")}/>
+                        <img src={require("../../images/Firewall.svg").default}/>
                     </div>
                 </div>
             </div>

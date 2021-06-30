@@ -14,11 +14,11 @@ export default function TopSection() {
                             you can check it out in my github for source code
                             
                         </p>
-                        <img className="icon-xyz" src={require('../../images/witchandcat.svg')} width="100" alt="" /><br/>
+                        <img className="icon-xyz" src={require('../../images/witchandcat.svg').default} width="100" alt="" /><br/>
                         <a className="btn btn-primary btn-lg" href="https://github.com/blessingcharles">Github Link</a>
 
                     </div>
-                    <img src={require("../../images/wizard.svg")} 
+                    <img src={require("../../images/wizard.svg").default} 
                         className="img-fluid d-none d-sm-block"
                         alt=""
                         />

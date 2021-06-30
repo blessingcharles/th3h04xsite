@@ -19,13 +19,13 @@ export default function TopSection() {
                             Hi , I'm Blessing Charles here . I'm a developer , security enthusiast , automation lover , release series of security related
                             automated stuffs under ThomasTheCat . A hardcore Linux Lover.  
                             <p><i className="h5">" I love to make things to break things "</i></p>
-                            <img className="icon-xyz" src={require('../../images/witchandcat.svg')} width="100" alt="" />
+                            <img className="icon-xyz" src={require('../../images/witchandcat.svg').default} width="100" alt="" />
 
                         </p>
                         <button className="btn btn-primary btn-lg">Wizards Blog</button>
 
                     </div>
-                    <img src={require("../../images/cat777.svg")} 
+                    <img src={require("../../images/cat777.svg").default} 
                         className="img-fluid d-none d-sm-block"
                         alt=""
                         />

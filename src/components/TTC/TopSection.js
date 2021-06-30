@@ -13,11 +13,11 @@ export default function TopSection() {
                             Try on your localsite or any ctf challenges . Don't be Script kiddie always ,try build your own 
                             
                         </p>
-                        <img className="icon-xyz" src={require('../../images/witchandcat.svg')} width="100" alt="" /><br/>
+                        <img className="icon-xyz" src={require('../../images/witchandcat.svg').default} width="100" alt="" /><br/>
                         <a className="btn btn-primary btn-lg" href="https://github.com/blessingcharles">Github Link</a>
 
                     </div>
-                    <img src={require("../../images/alley.svg")} 
+                    <img src={require("../../images/alley.svg").default} 
                         className="img-fluid d-none d-sm-block"
                         alt=""
                         />
