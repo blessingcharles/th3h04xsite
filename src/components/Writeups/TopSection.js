@@ -1,10 +1,11 @@
 import React from 'react'
+import Smiley from '../../images/smiley.png'
 
 export default function TopSection() {
 
     return (
 
-        <section className="bg-dark pt-3 text-light text-center vh-100 text-sm-start">
+        <section className="bg-dark pt-5 text-light text-center vh-100 text-sm-start">
         <div className="container">
             <div className="d-sm-flex align-items-center justify-content-between">
                 <div>
@@ -18,7 +19,7 @@ export default function TopSection() {
                     <a className="btn btn-primary btn-lg" href="https://github.com/blessingcharles">Github Link</a>
 
                 </div>
-                <img src={require("../../images/Kitten.svg").default} 
+                <img src={Smiley} 
                     className="img-fluid d-none d-sm-block"
                     alt=""
                     />

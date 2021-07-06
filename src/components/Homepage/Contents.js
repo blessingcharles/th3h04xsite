@@ -1,8 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import MagicianFace from '../../images/magicianFace.png'
+
 
 export default function Contents() {
-    
+
     return (
         <main>
             <section className="p-3 ">
@@ -37,7 +39,7 @@ export default function Contents() {
 
                     </div>
                     <div className="col-md">
-                        <img src={require("../../images/Firewall.svg").default}/>
+                        <img src={MagicianFace}/>
                     </div>
                 </div>
             </div>

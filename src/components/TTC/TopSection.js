@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Alley from '../../images/alley.png'
 export default function TopSection() {
     return (
-        <section className="bg-dark pt-3 text-light text-center vh-100 text-sm-start">
+        <section className="bg-dark pt-5 text-light text-center vh-100 text-sm-start">
             <div className="container">
                 <div className="d-sm-flex align-items-center justify-content-between">
                     <div>
@@ -17,7 +17,7 @@ export default function TopSection() {
                         <a className="btn btn-primary btn-lg" href="https://github.com/blessingcharles">Github Link</a>
 
                     </div>
-                    <img src={require("../../images/alley.svg").default} 
+                    <img src={Alley} 
                         className="img-fluid d-none d-sm-block"
                         alt=""
                         />

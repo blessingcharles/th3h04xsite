@@ -1,9 +1,10 @@
 import React from 'react'
+import developer from '../../images/developer.png'
 
 export default function TopSection() {
     return (
         <section className="bg-dark pt-5 text-light text-center vh-100 text-sm-start">
-            <div className="container">
+            <div className="container pt-5">
                 <div className="d-sm-flex align-items-center justify-content-between">
                     <div>
                         <div className="text-container allignment textSize diplay-inline">
@@ -25,7 +26,7 @@ export default function TopSection() {
                         <button className="btn btn-primary btn-lg">Wizards Blog</button>
 
                     </div>
-                    <img src={require("../../images/cat777.svg").default} 
+                    <img src={developer} 
                         className="img-fluid d-none d-sm-block"
                         alt=""
                         />
