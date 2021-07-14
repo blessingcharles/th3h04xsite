@@ -16,7 +16,7 @@ export default function TopSection() {
                         
                     </p>
                     <img className="icon-xyz" src={require('../../images/witchandcat.svg').default} width="100" alt="" /><br/>
-                    <a className="btn btn-primary btn-lg" href="https://github.com/blessingcharles">Github Link</a>
+                    {/* <a className="btn btn-primary btn-lg" href="https://github.com/blessingcharles">Github Link</a> */}
 
                 </div>
                 <img src={Smiley} 

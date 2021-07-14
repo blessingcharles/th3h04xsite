@@ -10,6 +10,7 @@ import EachWriteUps from './pages/EachWriteUps'
 
 import MyNavbar from './components/MyNavbar'
 import MyFooter from "./components/MyFooter"
+import CreateBlog from "./pages/CreateBlog"
 
 function App(){
 
@@ -38,8 +39,11 @@ function App(){
             <EachWriteUps />
           </Route>
 
-          <Redirect exact path='/' />
+          <Route exact path='/createblog'>
+            <CreateBlog />
+          </Route>
 
+          <Redirect exact path='/' />
         </Switch>
      
     )

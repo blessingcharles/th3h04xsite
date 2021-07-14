@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+
 import MagicianFace from '../../images/magicianFace.png'
+import AllCards from './AllCards'
 
 
 export default function Contents() {
@@ -11,7 +13,7 @@ export default function Contents() {
             <div className="container">
                 <div className="row align-items-center  justify-content-between">
                     <div className="col-md">
-                        <img src={require("../../images/computers.svg").default}/>
+                        <img src={require("../../images/computers.svg").default } alt="computers"/>
                     </div>
                     <div className="col-md p-5">
                         <h2>What can You Expect Here?</h2>
@@ -19,12 +21,18 @@ export default function Contents() {
                         <p className="lead">Learn about Our security Automation Tools Under Thomas The Cat  <NavLink to="/ttc">here</NavLink> </p>
                         <p className="lead">Read About My Educational Os  <NavLink to="/dev/tomos">here</NavLink>  </p>
                         <p className="lead">Visit MY github Page and Contribute New Features</p>
-                        
-
+        
                     </div>
                 </div>
             </div>
             </section>
+
+            {/* cards start */}
+
+                <AllCards />
+
+
+            {/* cards  end */}
 
             <section className="p-3 ">
             <div className="container">
@@ -39,7 +47,7 @@ export default function Contents() {
 
                     </div>
                     <div className="col-md">
-                        <img src={MagicianFace}/>
+                        <img src={MagicianFace} alt="magicianface"/>
                     </div>
                 </div>
             </div>

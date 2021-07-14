@@ -1,18 +1,35 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 
 import { useParams } from 'react-router-dom'
 
-import hello from '../components/EachWriteUps/hello.txt'
+require('dotenv').config()
 
 export default function EachWriteUps() {
 
     const {name} = useParams();
 
-    const content = fetch()
+    let content ;
+
+    useEffect(() => {
+
+        let url = process.env.DOMAIN_URL + `api/writeups/${name}`
+        fetch(url)
+        .then(r =>{
+             console.log(r)
+             content = r.json()
+        }).catch(err =>{
+            console.log(err)
+        })
+    }, [name])
+
     return (
         <div>
-                
+            <h1>{name}</h1>
+            <div className="container">
+                {content}
+            </div>
         </div>
+
     )
     
 }
