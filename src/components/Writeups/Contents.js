@@ -44,18 +44,19 @@ export default function Contents() {
 
             {/* searchresults  */}
             <div className="container p-5">
-                {results.map((title,index) =>{
+                {results.map((results,index) =>{
 
-                    let href = "/writeups/"+title
+                    let href = "/writeups/"+results.title
 
-                    console.log(title)
+                    // console.log(title)
                     if(results.length === index+1){
                         
                         return <Cards 
-                            title={title}
-                            description="lorem10 erifneuirg ergiubeiubeur erbgiubegr"
+                            title={results.title}
+                            description={results.description}
                             lastElementRef={lastElementRef}
-                            imgsrc="https://assets.tryhackme.com/img/paths/offensivepentesting.jpg "
+                            key={results._id}
+                            imgsrc={results.image}
                             linkHref={href}
 
                         />
@@ -65,10 +66,10 @@ export default function Contents() {
                     else {
 
                         return <Cards 
-                        title={title}
-                        description="lorem10 erifneuirg ergiubeiubeur erbgiubegr"
-      
-                        imgsrc="https://assets.tryhackme.com/img/paths/offensivepentesting.jpg "
+                        title={results.title}
+                        description={results.description}
+                        key={results._id}
+                        imgsrc={results.image}
                         linkHref={href}
                     />
 

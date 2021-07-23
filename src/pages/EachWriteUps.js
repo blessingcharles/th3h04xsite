@@ -1,34 +1,79 @@
-import React , {useEffect} from 'react'
-
+import React , {useEffect, useState} from 'react'
+import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 import { useParams } from 'react-router-dom'
+import {BASE_URL} from '../cofig'
+import  dotenv from 'dotenv'
 
-require('dotenv').config()
+dotenv.config()
+
 
 export default function EachWriteUps() {
 
-    const {name} = useParams();
-
-    let content ;
+    let {name} = useParams();
+    const [title , setTitle] = useState("")
+    const [description , setDescription] = useState("")
+    const [content , setContent] = useState("")
+    const [image , setImage] = useState("")
+        
+    name = name.toLowerCase()
 
     useEffect(() => {
 
-        let url = process.env.DOMAIN_URL + `api/writeups/${name}`
-        fetch(url)
-        .then(r =>{
-             console.log(r)
-             content = r.json()
-        }).catch(err =>{
-            console.log(err)
-        })
+        let url = BASE_URL + `/api/writeups/title?name=${name}`
+        // url = "http://192.168.1.7:5000/api/writeups/title?name=dummy"
+        // url = "https://jsonplaceholder.typicode.com/posts"
+
+        const fetchData = async()=>{
+            const response = await fetch(url)
+            console.log(response)
+            const data = await response.json()
+            // console.log(data)
+            if(data){
+                setContent(data.content)
+                setTitle(data.title)
+                setDescription(data.description)
+                setImage(data.image)
+            }
+            if(!data){
+                setContent(`no data for given title : ( ${name}`)
+            }
+        }
+
+        fetchData()
     }, [name])
 
+    const markdown = `A paragraph with *emphasis* and **strong importance**.
+# heading
+> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+    
+* Lists
+* [ ] todo
+* [x] done
+    
+A table:
+    
+| a | b |
+| - | - |
+    `
+
     return (
-        <div>
-            <h1>{name}</h1>
-            <div className="container">
-                {content}
+        content?(
+        <div className="p-3">
+            <div className="container p-3">
+                <h1 className="myfire">{title}</h1>
+                <p className="myfire-small">{description}</p>
+                <div className="container pt-5 pb-5">
+                    <img src={image} alt="" className="img-fluid pb-5"></img>
+                   
+                </div>
             </div>
+             <div className="container">
+                <ReactMarkdown children={content} plugins={[gfm]}/>
+             </div>
+           
         </div>
+        ):<h1>WriteUps Loading ...</h1>
 
     )
     

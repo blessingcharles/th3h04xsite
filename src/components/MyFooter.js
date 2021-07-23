@@ -3,24 +3,24 @@ import React from 'react'
 export default function MyFooter() {
     
     return (
-        <footer className="bg-dark text-center text-white">
+        <footer className="bg-dark text-center text-white myfooter">
         
             <div className="container p-4">
             
                 <section className="mb-4">
-                    <a href="">
+                    <a href="https://twitter.com/th3h04x">
                         <i className="bi bi-twitter "></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/blessingcharles">
                         <i className="bi bi-github mx-1"></i>
                     </a>
-                    <a href="">
+                    <a href="/">
                         <i className="bi bi-linkedin mx-1"></i>
                     </a>
-                    <a href="">
+                    <a href="/">
                         <i className="bi bi-instagram mx-1"></i>
                     </a>
-                    <a href="">
+                    <a href="/">
                         <i className="bi bi-facebook mx-1"></i>
                     </a>
                 </section>

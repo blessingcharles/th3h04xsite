@@ -5,14 +5,14 @@ export default function TopSection() {
 
     return (
 
-        <section className="bg-dark pt-5 text-light text-center vh-100 text-sm-start">
+        <section className="bg-dark pt-3 text-light text-center vh- text-sm-start pb-5">
         <div className="container">
             <div className="d-sm-flex align-items-center justify-content-between">
                 <div>
-                    <h1 className="myfire font-effect-fire-animation pt-3 pb-3">WriteuPs</h1>
+                    <h1 className="myfire font-effect-fire-animation pt-">WriteuPs</h1>
                 
                     <p className="lead my-4">
-                        Walkthroughs are available in my github , posted here also soon . Enjoy Your stay
+                        Walkthroughs and Writeups for various CTF and Security related stuffs are available here  
                         
                     </p>
                     <img className="icon-xyz" src={require('../../images/witchandcat.svg').default} width="100" alt="" /><br/>
